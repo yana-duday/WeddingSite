@@ -1,0 +1,153 @@
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #fff;
+    width: 600px;
+    height: 400px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+       -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+}
+
+
+.jcarousel-wrapper .photo-credits {
+    font-family: 'Fauna One' sans-serif;
+    position: relative;
+    margin: 0 auto;
+    bottom: 0;
+    font-size: 15px;
+    color: #000080;
+    opacity: .66;
+    text-align: center;
+}
+
+.jcarousel-wrapper .photo-credits a {
+    color: #0030ff;
+}
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 200px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #000080;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 80px/10px Arial, sans-serif;
+
+}
+
+.jcarousel-control-prev {
+    left: -50px;
+}
+
+.jcarousel-control-next {
+    right: -50px;
+}
+
+.jcarousel-control-prev:hover span,
+.jcarousel-control-next:hover span {
+    display: block;
+}
+
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+    opacity: .3;
+    cursor: default;
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    position: relative;
+    margin-top: 0;
+}
+
+.jcarousel-pagination a {
+    font-family: 'Open Sans Condensed', serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    min-width: 20px;
+    background: #aee857;
+    color: #000080;
+    border-radius: 20px;
+    padding: 3px;
+    text-align: center;
+    margin-right: 2px;
+    opacity: .75;
+}
+
+.jcarousel-pagination a.active {
+    background: #0030ff;
+    color: #fff;
+    opacity: 1;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-width: 1200px) {
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #fff;
+    width: 400px;
+    height: 267px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+       -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+}
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel img {
+    width: 400px;
+    height: 267px;
+}
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 120px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #000080;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 80px/2px Arial, sans-serif;
+
+}
+}

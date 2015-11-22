@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Matt & Yana | We're Getting Married!</title>
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+<link rel="shortcut icon" href="favicon.ico" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link href="css/lightbox.css" rel="stylesheet">
+	<link href="css/jcarousel.basic.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+
+<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Poppins:400,600,700,500,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,400italic,500,500italic,300,100italic,100,300italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:700,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' />
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="dist/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="jcarousel.basic.js"></script>
+	   <link href="featherlight-1.3.3\src\featherlight.css" type="text/css" rel="stylesheet">
+	   <script src="featherlight-1.3.3\src\featherlight.js" type="text/javascript" charset="utf-8"></script>
+	   
+    <script>
+
+	$(function(){
+    $(window).scroll(function() {              
+      $(document).scrollTop() > 100 ? $('#footer-copy:visible').fadeOut() : $('#footer-copy:hidden').fadeIn();
+    });
+})
+/*
+///// COUNTDOWN SCRIPT /////
+	function Countdown() {
+	var target_date = new Date("Oct 8, 2016").getTime();
+ 
+	// variables for time units
+	var days, hours, minutes;
+ 
+	// get tag element
+	var dayElem = document.getElementById("dayElem");
+	var hourElem = document.getElementById("hourElem");
+	var minElem = document.getElementById("minElem");
+
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+     
+    // format countdown string + set tag value
+    dayElem.innerHTML = days;
+    hourElem.innerHTML = hours;
+    minElem.innerHTML = minutes;
+ }
+*/
+ function dayCalc() {
+ 	var target_date = new Date("Oct 8, 2016").getTime();
+
+	var days, hours, minutes;
+ 
+	// get tag element
+	var dayElem = document.getElementById("daySpace");
+	var hourElem = document.getElementById("hourSpace");
+	var minElem = document.getElementById("minSpace");
+
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+
+ 	var dayHtml = "<div class='timer' data-from='0' data-to='" + days +
+ 		"' data-speed='500' data-refresh-interval='50'>" + 
+ 		days + "</div><h5>Days</h5>";
+    dayElem.innerHTML = dayHtml;
+
+     var hourHtml = "<div class='timer' data-from='0' data-to='" + hours +
+ 		"' data-speed='1000' data-refresh-interval='50'>" + 
+ 		hours + "</div><h5>Hours</h5>";
+    hourElem.innerHTML = hourHtml;
+
+ 	var minuteHtml = "<div class='timer' data-from='0' data-to='" + minutes +
+ 		"' data-speed='500' data-refresh-interval='50'>" + 
+ 		minutes + "</div><h5>Minutes</h5>";
+    minElem.innerHTML = minuteHtml;
+ }
+
+window.onload = function () {
+
+	setInterval(dayCalc(), 1000);
+	$('.timer').countTo();
+}
+///// end countdown script /////
+
+
+	</script>
+
+</head>
+<body>
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 ">
+				<div class="navbar-header">
+					    <button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target="#myNavbar">
+					        <span class="glyphicon glyphicon-align-justify"></span>
+					    </button>
+      					<a class="navbar-brand logo" href="#">M<span class="ampersand">&</span>Y</a>
+    			</div>
+			</div>
+			<div class="col-md-8">
+				<nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
+					<ul class="nav navbar-nav navbar-right menu">
+						<li><a href="#couple" class="page-scroll">The Couple</a></li>
+						<li><a href="#story" class="page-scroll">The Story</a></li>
+						<li><a href="#team" class="page-scroll">The Team</a></li>
+						<li><a href="#details" class="page-scroll">The Details</a></li>
+						<li><a href="#gifts" class="page-scroll">The Gifts</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="container-fluid main" id="page-top">
+	<div class="row">
+		<div class="col-md-12 backg">
+			<div class="col-md-4 col-md-offset-4 inner col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+				<div class="text-box">
+                	<p class="intro">Welcome to our wedding website! We can't wait to celebrate our wedding with all of you in Lyons, Colorado on </p>
+                    <h2>October 8th, 2016</h2>
+                    <h3>Until then, take some time and explore our site to learn a bit more about us, and the details of the big day.</h3>
+				</div>
+  			</div>
+		</div>
+		<div class="col-md-12 some-notes">
+			<div class="title">
+			<span class="eng-photo-title"><h2>Engagement Photos</h2></span>
+				<div class="previous"></div>
+                <div class="eng-photos">
+                <div><img src="img/slideshow/1.jpg"></div>
+                <div><img src="img/slideshow/2.jpg"></div>
+                <div><img src="img/slideshow/3.jpg"></div>
+                <div><img src="img/slideshow/4.jpg"></div>
+                <div><img src="img/slideshow/5.jpg"></div>
+                <div><img src="img/slideshow/6.jpg"></div>
+                <div><img src="img/slideshow/7.jpg"></div>
+                <div><img src="img/slideshow/9.jpg"></div>
+                <div><img src="img/slideshow/10.jpg"></div>
+                </div>
+            <div class="next"></div>
+		    </div>
+		    <div class="photo-credit"><br>Photography by <a href="http://www.liefdephotography.com/" target="_blank">Liefde Photography</a></div>
+		</div>
+		<div id="footer-copy">site made with love by the <a href="www.yanaduday.com" target="_blank">bride</a></div>
+	</div>
+</div>
+
+<div class="container-fluid couple-cont" id="couple">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+			<div class="our-names"><span class="table-names">Yana <span class="ampersand-table">&nbsp;&nbsp;&&nbsp;&nbsp;</span> Matt</div>
+			<div class="our-container">
+			<div class="yana-info"><center>
+			<div class="yana-img"></div><br>
+			<div class="yana-text">
+					<span class="name">Yana</span><br>
+					<span class="bride-groom">Bride</span><br><br>
+					<p>Talent development specialist (it's an HR thing), heavy weight-lifter, hobby-dabbler</b></center>
+					</div>
+			</div>
+			<div class="matt-info"><center>
+				<div class="matt-img"></div><br>
+				<div class="matt-text">
+					<span class="name">Matt</span><br>
+					<span class="bride-groom">Groom</span><br><br>
+					<p>Software engineer, expert grilled-cheese maker, cat-serenader</center></p>
+				</div>
+			</div>
+
+		    </div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="container-fluid countspace">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 countbg">
+			<div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="counter-item">
+                   <span id="daySpace"> </span>                              
+                </div>
+            </div>  
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="counter-item">
+                   <span id="hourSpace"> </span>                               
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="counter-item">
+                    <span id="minSpace"> </span>                   
+                </div>
+            </div>
+            
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="container-fluid story-cont" id="story">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-center story-text underline">The Story of<br><span class="story-text-emph">the Proposal</span></h2>
+					<div class="story-body">
+				Matt proprosed on Yana's birthday &mdash; January 15th, 2015.<br><br>
+				Yana and Matt went to dinner that night with her parents at a steakhouse in Denver. Nothing was out of the ordinary.  Matt was constantly checking his phone, but since he sometimes has work issues to keep track of, it wasn't strange.<br><br>
+				Yana didn't know that Matt was checking on progress with two of their friends (Amber and Dave) who swooped in while they were out of the house to set up a surprise!<br><br>
+				When Matt and Yana arrived home, they walked in to see dimmed lights, a trail of rose petals leading into the living room, LED candles, rose vases on every surface, and a bottle of champagne on ice (along with a cake and some other dessert goodies!)  Yana was completely oblivious, thinking it was still part of her birthday celebration.<br><br>
+				Yana was surprised (to say the least) when Matt got down on one knee, and proposed to her in Russian.  Despite having talked about marriage for a long time during their 4 years together, Matt was still incredibly nervous and shaking, and looked like he was about to burst into tears. Once Yana was able to get past the deluge of emotions, of course she said <strong>YES!</strong>  They popped the champagne to celebrate, and indulged in the custom-made cake (a fun-bun and cuddle-bug &mdash; their nicknames for each other), before sharing the joyous news with friends and family.<br><br><br>
+		   		</div>
+		   		
+		   		<div class="proposal-pics">
+				<a href=" " data-featherlight="img/cake-une.png"><img src="img/cake-thumb.png"></a>
+				<a href=" " data-featherlight="img/macarons-une.png"><img src="img/macaron-thumb.png"></a>
+				<a href=" " data-featherlight="img/ring-une.png"><img src="img/ring-thumb.png"></a>
+				</div>
+			
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="container-fluid team-cont" id="team">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12"><center>
+				<span class="head-team">The Team:</span><br>
+				<h2 class="head-team-emph underline">Our Wedding Party</h2></center><br><br>
+				<center><h1 class="head-team"><i>Coming Soon!</i></h1></center>
+			</div>
+			<!--<div class="col-md-6 col-sm-6 col-xs-6 bride-text">
+					<p class="b-side">Bride's Side</p>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 groom-text">
+
+				<p class="g-side">Groom's Side</p>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6 moh-bem-contain">
+				<div class="moh">
+			 	<div class="moh-img">
+			 	<div class="ribbon">MAID OF HONOR</div>
+			 	</div>
+
+				
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 moh-bem-contain">
+			<div class="moh">
+			 	<div class="bem-img"><div class="ribbon-bem">BEST MAN</div>
+			 	</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain">
+				<div class="bridemaid">
+			 	<div class="bm1-img">
+			 	</div>
+
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain">
+				<div class="groomsmen">
+			 	<div class="gm1-img">
+			 	</div>
+				</div>
+			</div>
+
+
+
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain amy">
+				<div class="bridemaid">
+			 	<div class="bm2-img">
+			 	</div>
+
+
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain">
+				<div class="groomsmen">
+			 	<div class="gm2-img">
+			 	</div>
+
+				</div>
+			</div>
+			</div>
+
+<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain amy">
+				<div class="bridemaid">
+			 	<div class="bm3-img">
+			 	</div>
+
+
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain">
+				<div class="groomsmen">
+			 	<div class="gm3-img">
+			 	</div>
+
+				</div>
+			</div>
+			</div>
+
+<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain amy">
+				<div class="bridemaid">
+			 	<div class="bm4-img">
+			 	</div>
+
+
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 bm-gm-contain">
+				<div class="groomsmen">
+			 	<div class="gm4-img">
+			 	</div>
+
+				</div>
+			</div>
+			</div>
+			</div>-->
+
+		</div>
+
+	</div>
+</div>
+
+
+<div class="container-fluid work" id="details">
+	<div class="container">
+		<div class="row" id="starts">
+			<div class="col-md-12 col-sm-12 col-xs-12 work-list">
+				<h2 class="head-team underline">The Details:<br>
+				<span class="head-team-emph">When, Where, & How</span></h2><br>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="venue-info">
+					<div class="venue-img"></div>
+					<div class="venue-text">
+						<span class="details-name">Lionscrest Manor</span><br><br>
+						<span class="details-name-text">603 Indian Lookout Road,<br>Lyons, CO 80540<br><br>
+						<a href="https://goo.gl/maps/FUHfs" target="_blank">Google Maps</a>
+						</span>
+					</div>
+				</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="date-info"><center>
+					<div class="date-div"><br><br><br><br><span class="date-div-text"><span class="date-day">Saturday</span><br>October 8th, 2016</span></div><br></center>
+					<center><h1 class="head-team"><i>Schedule<br>Coming Soon!</i></h1></center>
+					<!--<div class="schedule-text">
+					
+					<span class="details-name-text"><b>4:45 PM</b> - Please be seated<br>
+					<b>5:00 PM - Ceremony starts</b><br>
+					<b>5:30 PM</b> - Cocktail hour<br>
+					<b>6:00 PM</b> - Reception starts<br>
+					<b>6:15 PM</b> - Dinner & toasts<br>
+					<b>6:45 PM</b> - Dancing<br>
+					<b>7:00 PM</b> - Cake cutting<br>
+					<b>7:30 PM</b> - Resume dancing!<br>
+					<b>10:00 PM</b> - Afterparty<br>
+				</div>-->
+			</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="travel-info">
+				<div class="travel-img"></div><br>
+				<div class="travel-text">
+					<span class="details-name">Travel Info</span><br><br>
+					<span class="details-name-text">Guests arriving by plane should fly into Denver International Airport (DEN).<br><br>
+					Accomodation options will be listed below closer to the date of the event. <br><br>
+					</span>
+
+				</div><br>
+				</center>
+			</div>
+				</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid work" id="misc-info">
+	<div class="container">
+		<div class="row" id="starts">
+			<div class="col-md-12 col-sm-12 col-xs-12"><br><br>
+				<h2 class="head-team-emph underline">Miscellaneous Info</h2><br><br>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="weather">
+					<div class="misc-info-header-weather">WEATHER</div>
+					<div class="misc-info-text">Early October in Colorado is typically pretty warm, with evenings being much chillier. Even though the reception is indoors, it would be smart to bring a shawl or light jacket. <br><br>Check the forecast <a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=lyons%2C+co" target="_blank">here</a> once close to the date of the event.</div>
+					</div>
+				</div>
+					
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="attire">
+					<div class="misc-info-header-attire">ATTIRE</div>
+					<div class="misc-info-text">Formal to semiformal. The ceremony will be outdoors on a lawn, and the parking lot is unpaved (so ladies, bring a pair of flats if you're wearing high heels &mdash; and so you're comfortable for dancing!)</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="gettingthere">
+					<div class="misc-info-header-gettingthere">GETTING THERE</div>
+					<div class="misc-info-text">It takes a MINIMUM of 30 minutes to get from Boulder to Lyons, and about 20 minutes from Longmont &mdash; give yourself plenty of time to get there, since traffic can be bad on mountain roads during the weekend.</div>
+				    </div>
+				</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="reception">
+					<div class="misc-info-header-reception">RECEPTION</div>
+					<div class="misc-info-text">Open bar (yay!) with wine, liquor, beer, and non-alcoholic options as well.<br><br>
+					More information on dinner options coming soon.</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="parking">
+					<div class="misc-info-header-parking">PARKING</div>
+					<div class="misc-info-text">Look for Lionscrest Manor employees once you drive up the mountain, they will direct you to a parking spot in the lot. There is no charge for parking.</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="afterparty">
+					<div class="misc-info-header-afterparty">AFTER-PARTY</div>
+					<div class="misc-info-text">Stay tuned for more information about whether or not we'll be having an after-party.</div>
+					</div>
+				</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 work-space">
+					<div class="lodging">
+					<div class="misc-info-header-lodging">LODGING</div>
+					<div class="misc-info-text">Lodging options will be listed here once we are closer to the date of the event.</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 work-space">
+					<div class="aroundtown">
+					<div class="misc-info-header-aroundtown">AROUND TOWN</div>
+					<div class="misc-info-text">We encourage you to check out some of our favorite Boulder spots if you have the chance!
+					<ul>
+					<li><b>Breakfast:</b> <a href="https://www.luciles.com/" target="_blank">Lucile's</a> (amazing Cajun food - try the beignets!)</li>
+					<li><b>Lunch/Dinner:</b> <a href="https://www.themedboulder.com/" target="_blank">The Mediterranean ("The Med")</a> has great tapas, wine, and food.<br>
+					~ <a href="http://www.mountainsunpub.com/" target="_blank">Mountain Sun</a> is a local favorite and has great beer and burgers.<br>
+					~ <a href="https://www.riograndemexican.com/" target="_blank">The Rio</a> really hits the spot for that Mexican food craving, and the margaritas are killer!</li>
+
+					<li><b>Entertainment:</b> <a href="http://www.pressplaybar.com/" target="_blank">Press Play</a> is an arcade bar that has something for everyone (Yana loves the Giant Janga!)<br>
+					~ Find a show at the <a href="https://fiske.colorado.edu/beta/" target="_blank">Fiske Planetarium</a> - not your average planetarium (the set-up is high-tech, and super impressive).<br>
+					~ Go on a tour of the <a href="http://www.celestialseasonings.com/tours" target="_blank">Celestial Seasonings Tea factory</a> - a must-do for any Boulder visitor (and for anybody who loves tea).<br>
+					~ Hike <a href="https://bouldercolorado.gov/osmp/chautauqua-trailhead" target="_blank">Chautauqua</a> - trails for all levels of fitness, and offers beautiful views of Boulder and the mountains.<br><br>
+					See a <a href="http://www.boulderdowntown.com/events" target="_blank">full list of Boulder events</a>. </div>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid work" id="gifts">
+	<div class="container">
+		<div class="row" id="starts">
+			<div class="col-md-12 col-sm-12 col-xs-12 work-list">
+				<h2 class="head-team underline">The Gifts:
+				<br><span class="head-team-emph">Registry</span></h2><br><br>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+				<center><h1 class="head-team"><i>Coming Soon!</i></h1></center>
+					<!--<div class="registry-sub-text">We are registered at these fine establishments:</div>
+		   		<div class="registries"><div class="amazon"></div><div class="bbb"></div></div>
+			<br clear="all">
+
+		   		<div class="registry-text">Everything we put on the registries are things we'll love and would spruce up our home quite a lot.<br><br>We also know many of our guests will be travelling a long way to make it to our wedding, and we are sincerely honored by so many people gathering to celebrate with us! <br><br> <b>The gift of your presence is the most special thing you could give us (we mean it!)</b></div>-->
+ 
+		    </div> 
+
+				</div>
+				
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="effect7">Help us capture our day!  Use <b>#MattAndYana</b> for Instagram, Twitter, or other social media.</div>
+
+		
+				</div>
+				
+				</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid notes">
+  	<div class="row">
+   		<div class="col-md-12 col-sm-12 col-xs-12 notes-bg">
+    		<div class="container">
+    			<div class="col-md-12 col-sm-12 col-xs-12">
+     				<div class="dancing"><img src="img/indicator.gif"><br>
+		<p>Don't forget to bring your dancing shoes!</p></div>
+    			</div>
+    			
+   			</div>
+   		</div>
+  	</div> 
+</div>
+
+
+
+<div class="container-fluid footer">
+	<div class="row">
+		<div class="col-md-12">
+			<p>site made with love by the <a href="www.yanaduday.com" target="_blank">bride</a></p>
+		</div>
+	</div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countTo.js"></script>
+    <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(26.802100, 75.822739),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+	$(document).ready(function () {
+		$(document).on("scroll", onScroll);
+ 
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+ 
+			$('a').each(function () {
+				$(this).removeClass('active');
+			})
+			$(this).addClass('active');
+ 
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top - 100
+			}, 500, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
+	});
+
+	function onScroll(event){
+		var scrollPosition = $(document).scrollTop();
+		$('nav a').each(function () {
+			var currentLink = $(this);
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+				$('nav ul li a').removeClass("active");
+				currentLink.addClass("active");
+			}
+			else{
+				currentLink.removeClass("active");
+			}
+		});
+	}
+	</script>
+	<script type="text/javascript">
+    jQuery(function ($) {
+      // custom formatting example
+      $('.timer').data('countToOptions', {
+        formatter: function (value, options) {
+          return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+        }
+      });
+ 
+      // start all the timers
+      $('#starts').waypoint(function() {
+    $('.timer').each(count);
+	});
+ 
+      function count(options) {
+        var $this = $(this);
+        options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+        $this.countTo(options);
+      }
+    });
+  	</script>
+  	
+<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="slick/slick/initialize.js"></script>
+</body>
+</html>

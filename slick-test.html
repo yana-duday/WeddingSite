@@ -1,0 +1,34 @@
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+  </head>
+  <body>
+
+  <div class="eng-photos">
+
+                <div><img src="img/slideshow/1.jpg"></div>
+                <div><img src="img/slideshow/2.jpg"></div>
+                <div><img src="img/slideshow/3.jpg"></div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      console.log("test");
+      $('.eng-photos').slick({
+        dots: true,
+        fade: true,
+        mobileFirst: true,
+        adaptiveHeight: true,
+        centerMode: true
+      });
+    });
+  </script>
+
+  </body>
+</html>
