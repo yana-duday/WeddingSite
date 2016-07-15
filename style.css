@@ -173,11 +173,14 @@ h2.story-text::after {
 
 
 .team-cont {
+	padding: 40px 0px;
 	background-color: #f1f8ff;
 	border-top: 3px double #aee857;
-	padding: 50px 0px 50px 0px;
-	position: relative;
-	
+}
+
+.centerAlign{
+    text-align:center;
+    margin: 0 auto;
 }
 
 .head-team {
@@ -199,18 +202,17 @@ h2.story-text::after {
 }
 
 .bride-text {
-	overflow: hidden;
 	text-align: center;
-	padding-left: 3%;
+
 }
 
 .groom-text {
 	text-align: center;
-	padding-left: 3%;
+
 }
 
 .b-side {
-	font-size: 30px;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
 	font-style: italic;
 	font-weight: bold;
@@ -218,7 +220,7 @@ h2.story-text::after {
 }
 
 .g-side {
-	font-size: 30px;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
 	font-style: italic;
 	font-weight: bold;
@@ -226,256 +228,154 @@ h2.story-text::after {
 }
 
 
-div.ribbon-gs {
-	clear: both;
-  background-color: #424299;
-  display: block;
-  color: #FFFFFF;
-  font-size: 22px;
-  line-height: 38px;
-  margin: 15px 0;
-  text-align: center;
-  position: relative;
-  width: 200px;
-
+/*CENTERED COLUMNS*/
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    max-width:320px;
 }
 
-div.ribbon-gs:before,
-div.ribbon-gs:after {
-  content: "";
-  border-style: solid;
-  border-width: 0;
-  height: 0;
-  position: absolute;
-  width: 0;
-}
-
-div.ribbon-gs:before,
-div.ribbon-gs:after {
-  top: 6px;
-  z-index: -15;
-}
-
-div.ribbon-gs:before {
-  border-color: #232352 #232352 #232352 transparent;
-  border-width: 19px;
-  left: -25px;
-}
-
-div.ribbon-gs:after {
-  border-color: #232352 transparent #232352 #232352;
-  border-width: 19px;
-  right: -25px;
-}
-
-div.ribbon-bs {
-	clear: both;
-  background-color: #ff8845;
-  background-image: url('img/vintage-floral.png');
-  display: block;
-  color: #000080;
-  font-size: 22px;
-  line-height: 38px;
-  margin: 15px 0;
-  text-align: center;
-  position: relative;
-  width: 200px;
-
-}
-
-div.ribbon-bs:before,
-div.ribbon-bs:after {
-  content: "";
-  border-style: solid;
-  border-width: 0;
-  height: 0;
-  position: absolute;
-  width: 0;
-}
-
-div.ribbon-bs:before,
-div.ribbon-bs:after {
-  top: 6px;
-  z-index: -15;
-}
-
-div.ribbon-bs:before {
-  border-color: #e6cbd2 #e6cbd2 #e6cbd2 transparent;
-  border-width: 19px;
-  left: -25px;
-}
-
-div.ribbon-bs:after {
-  border-color: #e6cbd2 transparent #e6cbd2 #e6cbd2;
-  border-width: 19px;
-  right: -25px;
-}
+/* visual styles */
 
 
-.moh-bem-contain {
+.item {
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+    width:100%;
+    height:100%;
+    padding:16px 8px;
 	
 }
 
-
-.moh {
-	width: 174px;
-	margin: 0 auto;
-
+/* content styles */
+.item {
+	display:table;
 }
+.content {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+
+
+/* END CENTERED COLUMNS */
+
 
 .moh-img {
 	text-align: center;
 	background-image: url('portraits/bekah-white.png');
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
-	height: 251px;
-	width: 174px;
-	overflow: hidden;
-	position: relative;
-	margin-bottom: 10px;
-}
-
-
-.ribbon{
-  position:absolute;
-  padding:0;
-  margin:0;
-  text-align:center;
-  white-space:nowrap;
-  overflow:hidden;
-  transform-origin:0 100%;
-  box-shadow:5px 5px 6px 0 rgba(0,0,0,.5),0 1px 6px 0 rgba(0,0,0,1);
-  background-color:#aee857;
-  color:rgba(0,0,0,0.9);
-  height:25px;
-  width:230px;
-  top:114px;
-  transform:rotateZ(45deg);
-  padding-left:40px;
-  padding-right:40px;
-  line-height:25px;
-  right:-38px;
-  -webkit-transform:rotateZ(-45deg);
-  -moz-transform:rotateZ(-45deg);
-  -o-transform:rotateZ(-45deg);
-  z-index: 99;
-}
-.ribbon-bem{
-  position:absolute;
-  padding:0;
-  margin:0;
-  text-align:center;
-  white-space:nowrap;
-  overflow:hidden;
-  transform-origin:0 100%;
-  box-shadow:5px 5px 6px 0 rgba(0,0,0,.5),0 1px 6px 0 rgba(0,0,0,1);
-  background-color:#aee857;
-  color:rgba(0,0,0,0.9);
-  height:25px;
-  width:230px;
-  top:105px;
-  transform:rotateZ(45deg);
-  padding-left:40px;
-  padding-right:40px;
-  line-height:25px;
-  right:-20px;
-  -webkit-transform:rotateZ(-45deg);
-  -moz-transform:rotateZ(-45deg);
-  -o-transform:rotateZ(-45deg);
-  z-index: 99;
+	
 }
 
 .bem-img {
 
 	background-image: url('portraits/bruce-white.png');
-	height: 251px;
-	width: 174px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 261px;
+
 	overflow: hidden;
 	position: relative;
-	margin-bottom: 11px;
-}
 
-.bridemaid {
-	width: 174px;
-	margin: 0 auto;
-	text-align: center;
+	padding-bottom: 20px;
+	margin-right: 2%;
 }
 
 .bm1-img {
-	text-align: center;
+
 	background-image: url('portraits/sam-white.png');
 	background-repeat: no-repeat;
-	height: 251px;
-	width: 174px;
-	margin-bottom: 10px;
+	height: 261px;
+	width: auto;
 
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
 
 .bm2-img {
 	text-align: center;
 	background-image: url('portraits/amy-white.png');
 	background-repeat: no-repeat;
-	height: 251px;
+	height: 261px;
 	width: 174px;
-	margin-bottom: 10px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
 
 .bm3-img {
 	text-align: center;
 	background-image: url('portraits/dave-white.png');
 	background-repeat: no-repeat;
-	height: 251px;
-	width: 174px;
-	margin-bottom: 10px;
-}
-
-.bm4-img {
-	text-align: center;
-	background-image: none;
-	background-repeat: no-repeat;
-	height: 251px;
-	width: 174px;
-}
-
-.groomsmen {
+	height: 261px;
 	width: 174px;
 	margin: 0 auto;
-	text-align: center;
-
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
+
 
 .gm1-img {
 	text-align: center;
 	background-image: url('portraits/hiro-white.png');
-	height: 251px;
+	background-repeat: no-repeat;
+	height: 261px;
 	width: 174px;
-	background-color: #424299;
-	margin-bottom: 12px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
 
 .gm2-img {
 	text-align: center;
 	background-image: url('portraits/cornwell-white.png');
-	height: 251px;
+	background-repeat: no-repeat;
+	height: 261px;
 	width: 174px;
-	background-color: #424299;
-	margin-bottom: 12px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
-
 .gm3-img {
 	text-align: center;
 	background-image: url('portraits/bryan-white.png');
-	height: 251px;
+	background-repeat: no-repeat;
+	height: 261px;
 	width: 174px;
-	margin-bottom: 12px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
 
 .gm4-img {
 	text-align: center;
 	background-image: url('portraits/stobber_white.png');
-	height: 251px;
+	background-repeat: no-repeat;
+	height: 261px;
 	width: 174px;
-	margin-bottom: 12px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	margin-right: 2%;
 }
 
 
@@ -1439,7 +1339,6 @@ html, body. div{
     width: 100%;
 }
 
-
 #misc-info {
 	padding: 0px;
 
@@ -1466,12 +1365,23 @@ html, body. div{
 
 }
 
-@media (min-width: 380px) and (max-width: 765px){
 
+@media (min-width: 640px) and (max-width: 765px){
+
+
+}
+
+@media (min-width: 381px) and (max-width: 639px){
+
+
+@media (min-width: 380px) and (max-width: 765px){
 
 .container {
 	width: 100%;
 }
+
+
+
 .text-box, p.intro {
     font-size: 22px;
 	}
@@ -1566,29 +1476,6 @@ html, body. div{
 	width: 100%;
 }
 
-.groom-text {
-	width: 50%;
-	float: right;
-}
-
-.bride-text {
-	width: 50%;
-	float: left;
-
-}
-
-.groom-text img {
-	width: 100%;
-
-}
-
-.bride-text img {
-	width: 100%;
-
-}
-.amy {
-	float: left;
-}
 .travel-info {
 	width: 100%;	
 }
