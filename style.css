@@ -260,7 +260,7 @@ h2.story-text::after {
 	font-family: 'Lato', sans-serif;
 	font-weight: 600;
 	font-size: 18px;
-    width:100%;
+    width:90%;
     height:100%;
     padding:16px 8px;
 	
@@ -443,7 +443,7 @@ h2.story-text::after {
 }
 
 .schedule-text {
-	width: 100%;
+	width: 70%;
 	margin-left: 18%;
 }
 
@@ -1348,8 +1348,8 @@ html, body. div{
 }
 
 .schedule-text {
-	width: 50%;
-	margin-left: 35%;
+	width: 100%;
+	margin-left: 0;
 	padding-bottom: 20px;
 }
 
@@ -1372,6 +1372,7 @@ html, body. div{
 }
 
 @media (min-width: 381px) and (max-width: 639px){
+}
 
 
 @media (min-width: 380px) and (max-width: 765px){
@@ -1390,9 +1391,9 @@ html, body. div{
 }
 
 .schedule-text {
-	width: 60%;
+	width: 100%;
 	padding-bottom: 30px;
-	margin-left: 30%;
+	margin-left: 10%;
 }
 
 #gifts {
