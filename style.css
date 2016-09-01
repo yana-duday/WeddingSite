@@ -109,7 +109,7 @@ html, body. div{
 
 
 .yana-info, .matt-info {
-	width: 50%;
+	width: 100%;
 	float: left;
 	padding: 20px;
 	font-family: 'Lato', sans-serif;
@@ -1314,10 +1314,18 @@ input[placeholder], [placeholder], *[placeholder] {
  text-shadow: 2px 2px #000;
 }
 
-@media (min-width: 1201px) and (max-width: 1420px){
+@media (min-width: 1201px) and (max-width: 1820px){
 
 .container {
 	width: 100%;
+}
+
+.our-container {
+	width: 70%;
+}
+
+.yana-info, .matt-info {
+	width: 50%;
 }
 
 
@@ -1329,7 +1337,13 @@ input[placeholder], [placeholder], *[placeholder] {
 	width: 100%;
 }
 
+.our-container {
+	width: 90%;
+}
 
+.yana-info, .matt-info {
+	width: 50%;
+}
 
 }
 @media (max-width: 990px){
@@ -1361,6 +1375,10 @@ html, body. div{
 .travel-info {
 
 	margin: 0 auto;
+}
+
+.matt-info, .yana-info {
+	width: 50%;
 }
 
 }
