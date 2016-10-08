@@ -111,7 +111,7 @@ function fluidDialog() {
 }
 
 
-/*
+
  function dayCalc() {
  	var target_date = new Date("Oct 8, 2016").getTime();
 
@@ -136,7 +136,9 @@ function fluidDialog() {
     minutes = parseInt(seconds_left / 60);
     seconds = parseInt(seconds_left % 60);
 
- 	var dayHtml = "<div class='timer'>Today's the day!</div><h5>Days</h5>";
+ 	var dayHtml = "<div class='timer' data-from='0' data-to='" + days +
+ 		"' data-speed='500' data-refresh-interval='50'>" + 
+ 		days + "</div><h5>Days</h5>";
     dayElem.innerHTML = dayHtml;
 
      var hourHtml = "<div class='timer' data-from='0' data-to='" + hours +
@@ -298,12 +300,21 @@ window.onload = function () {
 	<div class="container">
 	<div class="row">
 		<div class="col-md-12 countbg">
-			<!--<div class="col-xs-12 col-sm-4 col-md-4">
+			<div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="counter-item">
                    <span id="daySpace"> </span>                              
                 </div>
-            </div>  -->
-<div class="counter-item"><span id="daySpace"></span></div>
+            </div>  
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="counter-item">
+                   <span id="hourSpace"> </span>                               
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="counter-item">
+                    <span id="minSpace"> </span>                   
+                </div>
+            </div>
             
 		</div>
 	</div>
