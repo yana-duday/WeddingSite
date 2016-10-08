@@ -33,7 +33,11 @@
     <script type="text/javascript" src="libs/jquery/jquery.js"></script>
     <script type="text/javascript" src="dist/jquery.jcarousel.min.js"></script>
     <script type="text/javascript" src="jcarousel.basic.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	   <link href="featherlight-1.3.3\src\featherlight.css" type="text/css" rel="stylesheet">
+	   <link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+	   <link href="css/jquery-ui.theme.min.css" type="text/css" rel="stylesheet">
+	   <link href="css/jquery-ui.structure.min.css" type="text/css" rel="stylesheet">
 	   <script src="featherlight-1.3.3\src\featherlight.js" type="text/javascript" charset="utf-8"></script>
 	   
     <script>
@@ -42,40 +46,72 @@
     $(window).scroll(function() {              
       $(document).scrollTop() > 100 ? $('#footer-copy:visible').fadeOut() : $('#footer-copy:hidden').fadeIn();
     });
-})
-/*
-///// COUNTDOWN SCRIPT /////
-	function Countdown() {
-	var target_date = new Date("Oct 8, 2016").getTime();
- 
-	// variables for time units
-	var days, hours, minutes;
- 
-	// get tag element
-	var dayElem = document.getElementById("dayElem");
-	var hourElem = document.getElementById("hourElem");
-	var minElem = document.getElementById("minElem");
+});
 
-    // find the amount of "seconds" between now and target
-    var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
- 
-    // do some time calculations
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
-     
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-     
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-     
-    // format countdown string + set tag value
-    dayElem.innerHTML = days;
-    hourElem.innerHTML = hours;
-    minElem.innerHTML = minutes;
- }
-*/
+$(function () {
+  $( "#shuttle,#schedule,#map" ).dialog({
+  	modal: true,
+  	width: 'auto',
+  	maxWidth: 600,
+  	height: 'auto',
+  	resizable: false,
+  	fluid: true,
+  	show: {
+  		effect: "fade",
+  		duration: 1000
+  	},
+  	hide: {
+  		effect: "fade",
+  		duration: 1000
+  	},
+    autoOpen: false
+  });
+  
+  $("#QL1").click(function() {
+    $("#shuttle").dialog('open');
+  });
+    $("#QL2").click(function() {
+   $("#schedule").dialog('open');
+  });
+  $("#QL3").click(function() {
+   $("#map").dialog('open');
+  });
+});
+
+$(window).resize(function () {
+    fluidDialog();
+});
+
+$(document).on("dialogopen", ".ui-dialog", function (event, ui) {
+    fluidDialog();
+});
+
+function fluidDialog() {
+    var $visible = $(".ui-dialog:visible");
+    // each open dialog
+    $visible.each(function () {
+        var $this = $(this);
+        var dialog = $this.find(".ui-dialog-content").data("ui-dialog");
+        // if fluid option == true
+        if (dialog.options.fluid) {
+            var wWidth = $(window).width();
+            // check window width against dialog width
+            if (wWidth < (parseInt(dialog.options.maxWidth) + 50))  {
+                // keep dialog from filling entire screen
+                $this.css("max-width", "90%");
+            } else {
+                // fix maxWidth bug
+                $this.css("max-width", dialog.options.maxWidth + "px");
+            }
+            //reposition dialog
+            dialog.option("position", dialog.options.position);
+        }
+    });
+
+}
+
+
+
  function dayCalc() {
  	var target_date = new Date("Oct 8, 2016").getTime();
 
@@ -125,7 +161,9 @@ window.onload = function () {
 
 
 	</script>
+<script>
 
+  </script>
 </head>
 <body>
 <header class="header">
@@ -156,9 +194,47 @@ window.onload = function () {
 
 <div class="container-fluid main" id="page-top">
 	<div class="row">
+
 		<div class="col-md-12 backg">
+<span class="hashtag">#MattAndYana</span><br>
+<span class="ql">QuickLinks for your convenience:</span><br>
+		<button id="QL3" class="ql-button">
+			<img src="icons/map2.png" width="50px"><br>
+			Getting There</button>
+			<div id="map" title="Getting There" hidden="hidden" class="dialog"><a href="https://goo.gl/maps/FUHfs"><b>Lionscrest Manor</b> (Google Maps link)</a><br>603 Indian Lookout Rd,<br>Lyons, CO 80540<br><br>
+				Take US-36 North (or I-25 North until exit 243 if coming from Denver).  US-36 becomes Main St as you enter the town of Lyons. At the end of Main St. there is a fork in the road - go right towards Estes Park for 1/4 of a mile. Take a left on Indian Lookout Rd.  You will drive 3/4 of a mile up this road; Lionscrest is at the very top.
+			</div>
+
+		<button id="QL1" class="ql-button">
+			<img src="icons/shuttle2.png" width="50px"><br>
+			Shuttle Info</button>
+			<div id="shuttle" title="Shuttle Info" hidden="hidden" class="dialog">The shuttle will arrive at Springhill Suites in Longmont at 3:45 PM and depart for the venue at <b>4:15 PM</b>. <br><br>Service will continue to and from the venue until <b>11:45 PM</b>.
+			</div>
+
+		<button id="QL2" class="ql-button">
+			<img src="icons/schedule.png" width="50px"><br>
+			Schedule of Events</button>
+			<div id="schedule" title="Schedule" hidden="hidden" class="dialog">
+			<ul class="dialog-sched">
+				<li><b>4:15 PM</b> - Shuttles Depart from Springhill Suites Longmont</li>
+				<li><b>4:45 PM</b> - Please be seated</li>
+				<li><b>5:00 PM - Ceremony begins</b></li>
+				<li><b>5:30 PM</b> - Cocktail hour</li>
+				<li><b>6:30 PM</b> - Reception begins</li>
+				<li><b>6:50 PM</b> - Dinner & toasts</li>
+				<li><b>7:45 PM</b> - Cake cutting</li>
+				<li><b>7:50 PM</b> - First dance</li>
+				<li><b>10:00 PM</b> - Last call</li>
+				<li><b>10:15 PM</b> - Bar closes</li>
+				<li><b>11:00 PM</b> - End of reception</li>
+			</ul>
+		</div>
+
+
+
 			<div class="col-md-4 col-md-offset-4 inner col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
 				<div class="text-box">
+
                 	<p class="intro">Welcome to our wedding website! We can't wait to celebrate our wedding with all of you in Lyons, Colorado on </p>
                     <h2>October 8th, 2016</h2>
                     <h3>Until then, take some time and explore our site to learn a bit more about us, and the details of the big day.</h3>
@@ -519,8 +595,8 @@ window.onload = function () {
 	</div>
 </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.countTo.js"></script>
